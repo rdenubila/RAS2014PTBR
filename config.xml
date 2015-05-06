@@ -6,7 +6,7 @@
         version     = "1.0" >
 
 
-    <name>RAS CEMIG PT</name>
+    <name>RAS Cemig</name>
 
     <description>
         RAS CEMIG 2015
@@ -52,6 +52,7 @@
 
     <preference name="orientation" value="portrait" />
     <preference name="prerendered-icon" value="true" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
 
     <preference name="DisallowOverscroll" value="true" />
     <preference name="webviewbounce" value="false" />
