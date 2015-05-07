@@ -8,9 +8,8 @@
 
 
 
-<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"> -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
-<meta name="viewport" content="width=device-width, initial-scale=0.66, minimum-scale=0.66, maximum-scale=0.66" /> 
 
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
@@ -129,6 +128,13 @@ var attributes = {};
 </script>
 
 
+<script type="text/javascript" src="monaca.viewport.js"></script>
+<script>
+	var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
+	if(!iOS){
+		monaca.viewport({width : 660});
+	}
+</script>
 
 
 
