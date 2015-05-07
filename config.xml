@@ -50,7 +50,7 @@
     <icon src="icones/icon-50.png" gap:platform="ios" width="50" height="50" />
     <icon src="icones/icon-50@2x.png" gap:platform="ios" width="100" height="100" />
 
-    <preference name="orientation" value="portrait" />
+    <preference name="orientation" value="landscape" />
     <preference name="prerendered-icon" value="true" />
     <preference name="AllowInlineMediaPlayback" value="true" />
 
