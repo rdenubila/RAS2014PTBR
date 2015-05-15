@@ -1335,6 +1335,8 @@ function initTabela(obj){
 
 	obj.find(".tabela").each(function( index ) {
 
+		$(this).attr("data-loaded", "0");
+
 		$(this).html("");
 
 		urlFile = local ? 'includes/tabelas/'+$(this).data('id')+".html" : "includes/tabelas/tabela.php?id="+$(this).data('id')+"&idioma="+idioma;
@@ -1369,6 +1371,12 @@ function initTabela(obj){
 
 			initLnk();
 
+			$(this).attr("data-loaded", "1");
+
+			if(checkTabela()){
+				moveScrollHash();
+			}
+
 		});
 
 
@@ -1377,6 +1385,18 @@ function initTabela(obj){
 
 
 
+}
+
+function checkTabela(){
+
+	tblLoaded = true;
+
+	$(".swiper-slide-active .tabela").each(function(index, el) {
+		if($(this).attr("data-loaded")=="0" ) tblLoaded = false;
+	});
+
+	//if(tblLoaded) moveScrollHash();
+	return tblLoaded;
 }
 
 
@@ -2468,7 +2488,12 @@ function moveScrollHash(){
 
 		} else if($("#titulo_"+area).length>0){
 
-			dest = ( atual.scrollTop() + $("#titulo_"+area).position().top ) - 50;
+			if(checkTabela()){
+				dest = ( atual.scrollTop() + $("#titulo_"+area).position().top ) - 50;
+			} else {
+				dest = null;
+			}
+			
 
 		} else {
 
@@ -2477,8 +2502,8 @@ function moveScrollHash(){
 		}
 
 
-
-		atual.delay(tempo).animate({scrollTop: dest }, 'slow' );
+		if(dest!=null)
+			atual.stop().delay(tempo).animate({scrollTop: dest }, 'slow' );
 
 	}
 
