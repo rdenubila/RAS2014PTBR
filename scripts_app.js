@@ -2,7 +2,7 @@
 var deviceReady = false;
 var jqueryReady = false;
 
-var urlVideo = "http://relatorio2014.cemig.com.br/video/pt/";
+var urlVideo = "http://www.cemig.com.br/pt-br/Relatorio-Anual-2014/Documents/relatorio/video/pt/";
 
 $(document).ready(function($) {
 
@@ -36,8 +36,6 @@ function checkReady(){
 function init(){
 
 	$("#video_intro").html('<video id="video_player" width="100%" height="100%" webkit-playsinline><source src="'+urlVideo+'/video.mp4" type="video/mp4"><source src="'+urlVideo+'video.webm" type="video/webm"><source src="'+urlVideo+'video.ogg" type="video/ogg"></video>');
-
-	$('body').prepend("<a href='javascript: void(0)' onClick='$(this).fadeOut(); $(\"#video_player\")[0].play();' style='display: block; position: absolute; width: 100%; height: 100%; background: url(images/bgs/"+idioma+"/capa_play.jpg) center center; background-size: cover; z-index: 100;'></a>");
 
 	iniciaVideo();
 
