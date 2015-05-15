@@ -949,7 +949,7 @@ function linkTarget(){
 
 		if( $(this).attr('href')!=undefined && $(this).attr('href').indexOf("http")>=0 ){
 
-			$(this).attr('target', '_system');
+			$(this).attr('target', '_blank');
 
 		}
 
@@ -1255,7 +1255,11 @@ function initLnk(){
 
 			} else {
 				if($(this).attr('href').charAt(0)!="j"){
-					$(this).attr("target", "_blank");
+
+					//$(this).attr("target", "_blank");
+					u = $(this).attr("href");
+					$(this).attr("href", "javascript: window.open('"+u+"', '_system');");
+
 				}
 			}
 
@@ -1362,6 +1366,8 @@ function initTabela(obj){
 			//if(!isIE){
 				$( "<p class='expand'><a href='javascript: abreZoom( $(\"#tbl_"+ $(this).attr("data-id")  +"\"), \"html\" ); void(0);' class='icon-expand'></a></p>" ).insertBefore( $(this) );
 			//}
+
+			initLnk();
 
 		});
 
