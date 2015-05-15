@@ -16,7 +16,7 @@
         Perfil 252
     </author>
 
-    <preference name="phonegap-version" value="3.7.0" />
+    <preference name="phonegap-version" value="3.5.0" />
 
     <icon src="icon.png" />
 
