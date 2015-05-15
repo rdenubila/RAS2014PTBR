@@ -949,7 +949,7 @@ function linkTarget(){
 
 		if( $(this).attr('href')!=undefined && $(this).attr('href').indexOf("http")>=0 ){
 
-			$(this).attr('target', '_blank');
+			$(this).attr('target', '_system');
 
 		}
 
