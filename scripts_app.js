@@ -2,7 +2,7 @@
 var deviceReady = false;
 var jqueryReady = false;
 
-var urlVideo = "http://www.cemig.com.br/pt-br/Relatorio-Anual-2014/Documents/relatorio/video/pt/";
+var urlVideo = "http://relatorio2014.cemig.com.br/video/pt/";
 
 $(document).ready(function($) {
 
