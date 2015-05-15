@@ -35,7 +35,6 @@ function checkReady(){
 
 function init(){
 
-
 	$("#video_intro").html('<video id="video_player" width="100%" height="100%" webkit-playsinline><source src="'+urlVideo+'/video.mp4" type="video/mp4"><source src="'+urlVideo+'video.webm" type="video/webm"><source src="'+urlVideo+'video.ogg" type="video/ogg"></video>');
 
 	iniciaVideo();

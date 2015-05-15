@@ -1498,6 +1498,7 @@ function loadGrafDiv(div, id){
 
 	urlFile = local ? 'includes/graficos/'+id+'.json' : "includes/graficos/grafico.php?id="+id;
 
+	console.log(url);
 
 	$.getJSON( urlFile, function(data) {
 
@@ -1556,7 +1557,14 @@ function loadGrafDiv(div, id){
 
 		    commonSeriesSettings : {},
 
-		    valueAxis : {},
+		    valueAxis : {
+		    	label: {
+			        customizeText: function (value) {
+			            return ajustaNumGraf(this.valueText, data.casas_decimais, idioma)
+
+			        }
+			    }
+		    },
 
 		    title: (idioma=="en" ? data.titulo_eng : data.titulo ),
 
@@ -1725,6 +1733,10 @@ function loadGrafDiv(div, id){
 					l.horizontalOffset = parseFloat(horizontal_offset[i]);
 					}
 
+					if( altera_tipo[i] !="" ){
+						s.type = altera_tipo[i];
+					}
+
 					s.label = l;
 
 					series.push(s);
@@ -1890,7 +1902,14 @@ function loadGrafDiv(div, id){
 
 		if(data.percent_axis=="s"){
 			graf.valueAxis = [
-				{ name: 'valueAxis' },
+				{ 
+					name: 'valueAxis',
+					label: {
+						customizeText: function() {
+				            return data.prefix + ajustaNumGraf(this.valueText, data.casas_decimais, idioma) + data.sufix;
+				        }
+				    }
+		        },
 				{
 					name: 'percentAxis',
 					position: 'right',
