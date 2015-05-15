@@ -5,7 +5,7 @@ var jqueryReady = false;
 var urlVideo = "http://relatorio2014.cemig.com.br/video/pt/";
 
 $(document).ready(function($) {
-	alert("ready");
+
 	jqueryReady = true;
 	checkReady();
 
@@ -15,7 +15,7 @@ $(document).ready(function($) {
 document.addEventListener("deviceready", onDeviceReady, false);
 
 function onDeviceReady() {
-	alert("onDeviceReady");
+
     deviceReady = true;
 	checkReady();
 
