@@ -52,7 +52,7 @@
 
     <preference name="orientation" value="landscape" />
     <preference name="prerendered-icon" value="true" />
-    <preference name="AllowInlineMediaPlayback" value="true" />
+    <!-- <preference name="AllowInlineMediaPlayback" value="true" /> -->
 
     <preference name="DisallowOverscroll" value="true" />
     <preference name="webviewbounce" value="false" />
@@ -64,6 +64,7 @@
     <feature name="http://api.phonegap.com/1.0/network"/>
 
     <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" version="0.5.2" />
 
 
 </widget>
