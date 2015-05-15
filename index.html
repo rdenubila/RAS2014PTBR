@@ -10,7 +10,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
 
-
 <meta name="apple-mobile-web-app-capable" content="yes" />
 
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -93,8 +92,13 @@
 
 
 
+<script src="scripts.js?v=8153"></script>
+<script src="scripts_app.js"></script>
+
+
 <script src="js/jquery.panzoom.js"></script>
 <script src="js/jquery.mousewheel.js"></script>
+
 
 <script src="js/chartjs/globalize_pt-br.js"></script>
 
@@ -104,39 +108,15 @@
 
 <script src="js/theme.js"></script>
 
-<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
-<script src="scripts.js?v=9336"></script>
-<script src="scripts_app.js"></script>
+<script src="monaca.viewport.js"></script>
 
-
-<script type="text/javascript" src="js/swfobject.js"></script>
-
-<script type="text/javascript" src="js/swffit.js"></script>
-
-<script type="text/javascript">
-
-
-
-var flashvars = {};
-
-var params = {wmode: "transparent"};
-
-var attributes = {};
-
-
-
-</script>
-
-
-<script type="text/javascript" src="monaca.viewport.js"></script>
 <script>
 	var iOS = ( navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false );
-	if(!iOS){
-		monaca.viewport({width : 1024});
+	var Android = ( navigator.userAgent.match(/(Android)/g) ? true : false );
+	if(Android){
+		monaca.viewport({width : 1200});
 	}
 </script>
-
-
 
 </head>
 
@@ -253,7 +233,7 @@ var attributes = {};
 
 			<li><a href="#" onclick="$('#ajuda').fadeIn(); return false;" class="relatorio icon-sobre" title="Ajuda"></a></li><li>
 
-			<li><a href="#" onclick="moveCapitulo(1); return false;" class="icon-indicadores" title="Principais Indicadores"></a></li><li>
+			<li><a href="#" onclick="moveCapitulo(1); return false;" class="relatorio icon-indicadores" title="Principais Indicadores"></a></li><li>
 
 			<a href="#" onclick="moveCapitulo(2); return false;" class="icon-graficos" title="Principais Gráficos"></a></li><li>
 
@@ -261,7 +241,7 @@ var attributes = {};
 
 			</li><li>
 
-			<a href="impressao.pdf" target="_blank" class="icon-print" title="PDF"></a></li><li id="busca" class="fechado">
+			<a href="impressao.pdf" target="_blank" class="icon-print" title="Imprimir"></a></li><li id="busca" class="fechado">
 
 
 
@@ -984,9 +964,6 @@ var attributes = {};
 
 
 	<div class="diretor">
-
-		
-			<div class="foto_dir" style="background-image: url('arquivos/adm_bruno_1.jpg')"></div>
 
 		
 		<div class="nome">Bruno Gonçalves Siqueira</div>
