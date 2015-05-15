@@ -2170,11 +2170,11 @@ $(document).ready(function($) {
 
 
 	//if (location.hash=="" && (navigator.userAgent.match(/iPad/i) || navigator.userAgent.match(/Android/i) ) ){
-	if (location.hash=="" && (navigator.userAgent.match(/iPad/i) ) ){
+	/*if (location.hash=="" && (navigator.userAgent.match(/iPad/i) ) ){
 
 	    $('body').prepend("<a href='javascript: void(0)' onClick='$(this).fadeOut(); $(\"#video_player\")[0].play();' style='display: block; position: absolute; width: 100%; height: 100%; background: url(images/bgs/"+idioma+"/capa_play.jpg) center center; background-size: cover; z-index: 100;'></a>");
 
-	} 
+	} */
 
 
 
