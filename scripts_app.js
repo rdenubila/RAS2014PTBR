@@ -6,6 +6,8 @@ var urlVideo = "http://relatorio2014.cemig.com.br/video/pt/";
 
 $(document).ready(function($) {
 
+	alert(cordova.file.applicationDirectory);
+
 	jqueryReady = true;
 	checkReady();
 
