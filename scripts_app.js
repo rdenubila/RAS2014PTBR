@@ -14,20 +14,10 @@ $(document).ready(function($) {
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
-
-function success(fileEntry){
-	alert( fileEntry.name );
-}
-function fail(error){
-	alert("Erro");
-}
-
 function onDeviceReady() {
 
     deviceReady = true;
 	checkReady();
-
-	window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+'www/index.html',success,fail);
 
 }
 
