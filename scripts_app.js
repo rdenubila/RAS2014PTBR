@@ -14,6 +14,15 @@ $(document).ready(function($) {
 
 document.addEventListener("deviceready", onDeviceReady, false);
 
+window.resolveLocalFileSystemURL(cordova.file.applicationDirectory+'www/index.html',success,fail);
+function success(fileEntry){
+	alert( fileEntry );
+	console.log("got the file object")
+}
+function fail(error){
+	console.log("error");
+}
+
 function onDeviceReady() {
 
     deviceReady = true;
@@ -24,8 +33,6 @@ function onDeviceReady() {
 function checkReady(){
 
 	if(jqueryReady && deviceReady){
-
-		alert( window.resolveLocalFileSystemURL() );
 
 		init();
 
