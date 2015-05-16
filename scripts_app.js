@@ -25,7 +25,7 @@ function checkReady(){
 
 	if(jqueryReady && deviceReady){
 
-		alert(cordova.file.applicationDirectory);
+		alert( window.resolveLocalFileSystemURL() );
 
 		init();
 
