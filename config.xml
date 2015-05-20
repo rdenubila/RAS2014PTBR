@@ -57,6 +57,8 @@
     <gap:splash src="splash/Default-Landscape.png" gap:platform="ios" width="1024" height="768" />
     <gap:splash src="splash/Default-Landscape@2x.png" gap:platform="ios" width="2048" height="1536" />
 
+    <gap:splash src="splash/Default-Landscape-568h@2x.png" gap:platform="ios" width="1136" height="639" />
+
 
 
     <preference name="orientation" value="landscape" />
